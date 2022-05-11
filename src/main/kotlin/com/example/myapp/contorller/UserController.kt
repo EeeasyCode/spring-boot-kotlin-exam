@@ -1,18 +1,19 @@
 package com.example.myapp.contorller
 
-import com.example.myapp.entity.User
-import com.example.myapp.repository.UserRepository
+import com.example.myapp.dto.UserDto
+import com.example.myapp.service.UserService
 import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.PathVariable
+import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
+@RequestMapping("/user")
 class UserController(
-    //repository를 controller에서 직접 주입
-    //아직 service 로직을 구현하지 않았기 때문에, controller에서 구현
-    private val userRepository: UserRepository
-    ) {
-    @GetMapping("/users")
-    fun listUsers(): List<User> {
-        return userRepository.findAll()
-    }
+    private val userService: UserService
+) {
+ @GetMapping("/{id}")
+ fun getUser(@PathVariable id: Int): UserDto {
+     return userService.getUser(id)
+ }
 }

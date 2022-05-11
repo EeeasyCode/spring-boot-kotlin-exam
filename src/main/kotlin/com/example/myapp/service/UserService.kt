@@ -1,0 +1,16 @@
+package com.example.myapp.service
+
+import com.example.myapp.dto.UserDto
+import com.example.myapp.repository.UserRepository
+import org.springframework.stereotype.Service
+
+@Service
+class UserService(
+    private val userRepository: UserRepository
+) {
+    fun getUser(userId: Int): UserDto {
+        userRepository.getById(userId).apply {
+            return UserDto(userName, userAge, userSex, userId)
+        }
+    }
+}
