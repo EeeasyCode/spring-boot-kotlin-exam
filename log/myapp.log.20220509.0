@@ -1,0 +1,5 @@
+2022-05-09 19:13:37.385  INFO 33324 --- [main] com.example.myapp.MyappApplicationKt     : Starting MyappApplicationKt using Java 17.0.3 on MacBook-Pro-5.local with PID 33324 (/Users/aebdeung-ichangmin-ing/Desktop/workspace/myapp/build/classes/kotlin/main started by aebdeung-ichangmin-ing in /Users/aebdeung-ichangmin-ing/Desktop/workspace/myapp)
+2022-05-09 19:13:37.385  INFO 33324 --- [main] com.example.myapp.MyappApplicationKt     : The following 2 profiles are active: "local", "file-logging"
+2022-05-09 19:13:37.586  INFO 33324 --- [main] com.example.myapp.MyappApplicationKt     : Started MyappApplicationKt in 0.389 seconds (JVM running for 0.599)
+2022-05-09 19:13:37.587  INFO 33324 --- [main] MyappLogger                              : Im info!
+2022-05-09 19:13:37.587 ERROR 33324 --- [main] MyappLogger                              : Im error!

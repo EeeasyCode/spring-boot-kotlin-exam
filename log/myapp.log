@@ -1,0 +1,9 @@
+2022-05-10 23:46:04.200  INFO 34279 --- [main] com.example.myapp.MyappApplicationKt     : Starting MyappApplicationKt using Java 17.0.3 on MacBook-Pro-5.local with PID 34279 (/Users/aebdeung-ichangmin-ing/Desktop/workspace/myapp/build/classes/kotlin/main started by aebdeung-ichangmin-ing in /Users/aebdeung-ichangmin-ing/Desktop/workspace/myapp)
+2022-05-10 23:46:04.201  INFO 34279 --- [main] com.example.myapp.MyappApplicationKt     : The following 2 profiles are active: "local", "file-logging"
+2022-05-10 23:46:04.472  INFO 34279 --- [main] com.example.myapp.MyappApplicationKt     : Started MyappApplicationKt in 0.511 seconds (JVM running for 1.222)
+2022-05-10 23:46:37.218  INFO 34602 --- [main] com.example.myapp.MyappApplicationKt     : Starting MyappApplicationKt using Java 17.0.3 on MacBook-Pro-5.local with PID 34602 (/Users/aebdeung-ichangmin-ing/Desktop/workspace/myapp/build/classes/kotlin/main started by aebdeung-ichangmin-ing in /Users/aebdeung-ichangmin-ing/Desktop/workspace/myapp)
+2022-05-10 23:46:37.219  INFO 34602 --- [main] com.example.myapp.MyappApplicationKt     : The following 2 profiles are active: "local", "file-logging"
+2022-05-10 23:46:37.502  INFO 34602 --- [main] com.example.myapp.MyappApplicationKt     : Started MyappApplicationKt in 0.543 seconds (JVM running for 0.808)
+2022-05-10 23:47:02.647  INFO 34828 --- [main] com.example.myapp.MyappApplicationKt     : Starting MyappApplicationKt using Java 17.0.3 on MacBook-Pro-5.local with PID 34828 (/Users/aebdeung-ichangmin-ing/Desktop/workspace/myapp/build/classes/kotlin/main started by aebdeung-ichangmin-ing in /Users/aebdeung-ichangmin-ing/Desktop/workspace/myapp)
+2022-05-10 23:47:02.648  INFO 34828 --- [main] com.example.myapp.MyappApplicationKt     : The following 2 profiles are active: "local", "file-logging"
+2022-05-10 23:47:02.891  INFO 34828 --- [main] com.example.myapp.MyappApplicationKt     : Started MyappApplicationKt in 0.495 seconds (JVM running for 0.772)
