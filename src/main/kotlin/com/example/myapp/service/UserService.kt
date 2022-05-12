@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service
 class UserService(
     private val userRepository: UserRepository
 ) {
-    fun getUser(userId: Int): UserDto {
+    fun getUser(userId: String): UserDto {
         userRepository.getById(userId).apply {
             return UserDto(userName, userAge, userSex, userId)
         }

@@ -5,12 +5,14 @@ import javax.persistence.*
 
 @Entity
 @Table(name = "users")
-class User (
+class User(
     val userName: String,
-    val userAge: Int,
+    val userAge: String,
+    val userId: String,
     val userSex: String,
+
 ) {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    var userId: Int = 0
+    var crateId: Int = 0
 }

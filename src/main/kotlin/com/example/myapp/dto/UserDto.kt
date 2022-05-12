@@ -2,7 +2,8 @@ package com.example.myapp.dto
 
 data class UserDto(
     val userName: String,
-    val userAge: Int,
+    val password: String,
+    val userId: String,
     val userSex: String,
-    val userId: Int,
+
 )

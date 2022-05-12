@@ -1,3 +1,5 @@
+
+
 spring:
   config:
     activate:
@@ -11,7 +13,9 @@ spring:
       ddl-auto: create
     generate-ddl: true
     show-sql: true
-
+server:
+  address: localhost
+  port: 8888
 
 ---
 

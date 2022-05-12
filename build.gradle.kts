@@ -26,6 +26,7 @@ dependencies {
     runtimeOnly("mysql:mysql-connector-java") // MySQL
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+
 }
 
 allOpen { // 추가적으로 열어줄 allOpen
