@@ -10,7 +10,10 @@ class UserService(
 ) {
     fun getUser(userId: String): UserDto {
         userRepository.getById(userId).apply {
-            return UserDto(userName, userAge, userSex, userId)
+            return UserDto(userId, password, userName, userSex)
         }
+    }
+    fun delUser(userId: String) {
+        userRepository.deleteById(userId)
     }
 }
