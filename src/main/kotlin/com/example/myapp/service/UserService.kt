@@ -7,6 +7,9 @@ import org.springframework.stereotype.Service
 @Service
 class UserService(
     private val userRepository: UserRepository
+
+
+//    private val
 ) {
     fun getUser(userId: String): UserDto {
         userRepository.getById(userId).apply {
@@ -15,5 +18,6 @@ class UserService(
     }
     fun delUser(userId: String) {
         userRepository.deleteById(userId)
+
     }
 }

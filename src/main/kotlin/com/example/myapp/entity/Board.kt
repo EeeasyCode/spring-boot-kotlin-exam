@@ -3,6 +3,8 @@ package com.example.myapp.entity
 
 
 import org.apache.tomcat.jni.Local
+import org.hibernate.annotations.OnDelete
+import org.hibernate.annotations.OnDeleteAction
 import java.time.LocalDate
 import java.time.LocalDateTime
 import java.util.Date
@@ -16,6 +18,7 @@ class Board(
     val createdAt: Date?,
     var updatedAt: Date?,
     @ManyToOne
+    @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(name = "userId")
     val user: User,
     ) {

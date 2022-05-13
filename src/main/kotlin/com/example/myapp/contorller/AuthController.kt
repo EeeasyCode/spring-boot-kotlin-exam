@@ -14,7 +14,7 @@ class AuthController(
     private val authService: AuthService,
 ) {
     @PostMapping("/register")
-    fun register(@RequestBody request: RegisterDto) {
+    fun register(@RequestBody request: RegisterDto):String {
         request.apply {
             return authService.register(userId, password, userName, userSex)
         }

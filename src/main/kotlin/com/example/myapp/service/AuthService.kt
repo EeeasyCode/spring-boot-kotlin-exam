@@ -10,8 +10,9 @@ import org.springframework.web.bind.annotation.RequestParam
 class AuthService (
     private val userRepository: UserRepository
 ) {
-    fun register(userId: String, password: String, userName: String, userSex: String) {
+    fun register(userId: String, password: String, userName: String, userSex: String): String {
         userRepository.save(User(userId, password, userName, userSex))
+        return "register success"
     }
 
 //    fun login(userId: String, password: String){
