@@ -18,6 +18,5 @@ class UserService(
     }
     fun delUser(userId: String) {
         userRepository.deleteById(userId)
-
     }
 }

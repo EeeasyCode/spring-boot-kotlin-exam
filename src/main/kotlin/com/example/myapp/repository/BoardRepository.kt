@@ -4,6 +4,4 @@ import com.example.myapp.entity.Board
 import com.example.myapp.entity.User
 import org.springframework.data.jpa.repository.JpaRepository
 
-interface BoardRepository:JpaRepository<Board, Int>{
-    fun getByUser_UserId(user:String):Board
-}
+interface BoardRepository:JpaRepository<Board, Int>

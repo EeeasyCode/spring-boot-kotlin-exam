@@ -21,9 +21,9 @@ class BoardController(
         }
     }
 
-    @GetMapping("/read/{userId}")
-    fun readBoard(@PathVariable userId: String): ReadDto {
-        return boardService.readBoard(userId)
+    @GetMapping("/read/{boardId}")
+    fun readBoard(@PathVariable boardId: Int): ReadDto {
+        return boardService.readBoard(boardId)
 
     }
 

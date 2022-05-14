@@ -22,8 +22,8 @@ class BoardService(
         }
     }
 
-    fun readBoard(userId: String):ReadDto {
-        boardRepository.getByUser_UserId(userId).apply{
+    fun readBoard(boardId: Int):ReadDto {
+        boardRepository.getById(boardId).apply{
             return ReadDto(boardId, boardTitle, boardMain, createdAt, updatedAt)
         }
     }
