@@ -1,6 +1,7 @@
 package com.example.myapp.service
 
 import com.example.myapp.dto.CommentDto
+import com.example.myapp.dto.GetCommentDto
 import com.example.myapp.entity.Comment
 import com.example.myapp.repository.BoardRepository
 import com.example.myapp.repository.CommentRepository
@@ -20,4 +21,10 @@ class CommentService (
         val user = nowBoard.user
         commentRepository.save(Comment(commentDto.commentUser, commentDto.commentContent, Date(), nowBoard, user))
     }
-}
+
+    fun getComment(boardId: Int):List<GetCommentDto> {
+        val post = boardRepository.findById(boardId).get()
+        return commentRepository.findCommentsByBoard(post)
+        }
+    }
+    //원하는 정보만 return 어떻게 사용하는지

@@ -1,13 +1,12 @@
 package com.example.myapp.contorller
 
-import com.example.myapp.dto.BoardDto
-import com.example.myapp.dto.CommentDto
-import com.example.myapp.dto.ReadDto
-import com.example.myapp.dto.UpdateBoardDto
+import com.example.myapp.dto.*
+import com.example.myapp.entity.Comment
+import com.example.myapp.entity.User
 import com.example.myapp.service.BoardService
 import com.example.myapp.service.CommentService
 import org.springframework.web.bind.annotation.*
-import java.util.Date
+import java.util.*
 
 @RestController
 @RequestMapping("board")
@@ -44,5 +43,10 @@ class BoardController(
     @PostMapping("/comment/{boardId}")
     fun createComment(@PathVariable boardId: Int, @RequestBody request: CommentDto){
         return commentService.createComment(boardId, request)
+    }
+
+    @GetMapping("/comment/{boardId}")
+    fun getComment(@PathVariable boardId: Int): List<GetCommentDto> {
+        return commentService.getComment(boardId)
     }
 }
