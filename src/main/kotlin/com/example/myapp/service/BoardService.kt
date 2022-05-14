@@ -28,7 +28,7 @@ class BoardService(
         }
     }
 
-    fun delBoard(boardId: Int) {
+    fun deleteBoard(boardId: Int) {
         boardRepository.deleteById(boardId)
     }
 

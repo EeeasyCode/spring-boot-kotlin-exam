@@ -24,29 +24,39 @@ class BoardController(
         }
     }
 
-    @GetMapping("/read/{boardId}")
+    @GetMapping("/{boardId}/read")
     fun readBoard(@PathVariable boardId: Int): ReadDto {
         return boardService.readBoard(boardId)
 
     }
 
-    @DeleteMapping("/delete/{boardId}")
-    fun delBoard(@PathVariable boardId: Int) {
-        return boardService.delBoard(boardId)
+    @DeleteMapping("/{boardId}/delete")
+    fun deleteBoard(@PathVariable boardId: Int) {
+        return boardService.deleteBoard(boardId)
     }
 
-    @PutMapping("/update/{boardId}")
+    @PutMapping("/{boardId}/update")
     fun updateBoard(@PathVariable boardId: Int, @RequestBody request: UpdateBoardDto):UpdateBoardDto {
         return boardService.updateBoard(boardId, request)
     }
     //게시글 COMMENT API
-    @PostMapping("/comment/{boardId}")
+    @PostMapping("/comment/{boardId}/create")
     fun createComment(@PathVariable boardId: Int, @RequestBody request: CommentDto){
         return commentService.createComment(boardId, request)
     }
 
-    @GetMapping("/comment/{boardId}")
+    @GetMapping("/comment/{boardId}/getInfo")
     fun getComment(@PathVariable boardId: Int): List<GetCommentDto> {
         return commentService.getComment(boardId)
     }
+    @DeleteMapping("/comment/{commentId}/delete")
+    fun deleteComment(@PathVariable commentId: Int){
+        return commentService.deleteComment(commentId)
+    }
+
+    @PutMapping("/comment/{commentId}/update")
+    fun updateComment(@PathVariable commentId: Int, @RequestBody request: UpdateCommentDto){
+        return commentService.updateComment(commentId, request)
+    }
+
 }

@@ -8,16 +8,16 @@ import javax.persistence.*
 @Entity
 @Table(name = "comments")
 class Comment(
-  val commentUser: String,
-  val commentContent: String,
-  val createdAt: Date?,
+    val commentUser: String,
+    var commentContent: String,
+    val createdAt: Date?,
 
-  @ManyToOne
+    @ManyToOne
   @OnDelete(action = OnDeleteAction.CASCADE)
   @JoinColumn(name="board_id")
   val board: Board,
 
-  @ManyToOne
+    @ManyToOne
   @JoinColumn(name = "user_id")
   val user: User
 
