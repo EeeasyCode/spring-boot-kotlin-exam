@@ -19,8 +19,8 @@ class Board(
     var updatedAt: Date?,
     @ManyToOne
     @OnDelete(action = OnDeleteAction.CASCADE)
-    @JoinColumn(name = "userId")
-    val user: User,
+    @JoinColumn(name = "user_id")
+    val user: User
     ) {
     @Id
     @GeneratedValue( strategy = GenerationType.IDENTITY)
