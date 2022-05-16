@@ -1,5 +1,6 @@
 package com.example.myapp.service
 
+import com.example.myapp.dto.RegisterDto
 import com.example.myapp.entity.User
 import com.example.myapp.repository.UserRepository
 import org.springframework.stereotype.Service
@@ -10,7 +11,7 @@ class AuthService(
 ) {
     fun register(userId: String, password: String, userName: String, userSex: String): String {
         userRepository.save(User(userId, password, userName, userSex))
-        return "register success"
+        return userId
     }
 
 //    fun login(userId: String, password: String){
