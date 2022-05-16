@@ -33,11 +33,12 @@ class BoardService(
 
     fun updateBoard(boardId: Int, request: UpdateBoardDto): UpdateBoardDto {
         val nowBoard = boardRepository.getById(boardId)
-
-        nowBoard.boardTitle = request.boardTitle
-        nowBoard.boardMain = request.boardMain
-        nowBoard.updatedAt = Date()
-        boardRepository.save(nowBoard)
-        return UpdateBoardDto(nowBoard.boardTitle, nowBoard.boardMain, nowBoard.updatedAt)
+        nowBoard.apply {
+            boardTitle = request.boardTitle
+            boardMain = request.boardMain
+            updatedAt = Date()
+            boardRepository.save(nowBoard)
+            return UpdateBoardDto(boardTitle, boardMain, updatedAt)
+        }
     }
 }
