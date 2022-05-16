@@ -1,6 +1,5 @@
 package com.example.myapp.dto
 
-import com.example.myapp.entity.Board
 import java.util.Date
 
 data class BoardDto(

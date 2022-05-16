@@ -1,8 +1,6 @@
 package com.example.myapp.contorller
 
 import com.example.myapp.dto.*
-import com.example.myapp.entity.Comment
-import com.example.myapp.entity.User
 import com.example.myapp.service.BoardService
 import com.example.myapp.service.CommentService
 import org.springframework.web.bind.annotation.*
@@ -16,8 +14,8 @@ class BoardController(
 ) {
     //게시판 CRUD API
     @PostMapping("/create")
-    fun createBoard(@RequestBody request:BoardDto) {
-        request.apply{
+    fun createBoard(@RequestBody request: BoardDto) {
+        request.apply {
             return boardService.createBoard(
                 BoardDto(userId, boardTitle, boardMain, Date(), Date())
             )
@@ -27,7 +25,6 @@ class BoardController(
     @GetMapping("/{boardId}/read")
     fun readBoard(@PathVariable boardId: Int): ReadDto {
         return boardService.readBoard(boardId)
-
     }
 
     @DeleteMapping("/{boardId}/delete")
@@ -36,12 +33,12 @@ class BoardController(
     }
 
     @PutMapping("/{boardId}/update")
-    fun updateBoard(@PathVariable boardId: Int, @RequestBody request: UpdateBoardDto):UpdateBoardDto {
+    fun updateBoard(@PathVariable boardId: Int, @RequestBody request: UpdateBoardDto): UpdateBoardDto {
         return boardService.updateBoard(boardId, request)
     }
     //게시글 COMMENT API
     @PostMapping("/comment/{boardId}/create")
-    fun createComment(@PathVariable boardId: Int, @RequestBody request: CommentDto){
+    fun createComment(@PathVariable boardId: Int, @RequestBody request: CommentDto) {
         return commentService.createComment(boardId, request)
     }
 
@@ -50,13 +47,12 @@ class BoardController(
         return commentService.getComment(boardId)
     }
     @DeleteMapping("/comment/{commentId}/delete")
-    fun deleteComment(@PathVariable commentId: Int){
+    fun deleteComment(@PathVariable commentId: Int) {
         return commentService.deleteComment(commentId)
     }
 
     @PutMapping("/comment/{commentId}/update")
-    fun updateComment(@PathVariable commentId: Int, @RequestBody request: UpdateCommentDto){
+    fun updateComment(@PathVariable commentId: Int, @RequestBody request: UpdateCommentDto): UpdateCommentDto {
         return commentService.updateComment(commentId, request)
     }
-
 }

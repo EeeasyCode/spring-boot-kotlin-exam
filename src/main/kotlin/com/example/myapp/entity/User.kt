@@ -2,7 +2,6 @@ package com.example.myapp.entity
 
 import javax.persistence.*
 
-
 @Entity
 @Table(name = "users")
 class User(
@@ -14,8 +13,4 @@ class User(
     val userName: String,
     val userSex: String,
 
-
-
-    )
-
-
+)

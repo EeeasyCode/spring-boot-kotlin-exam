@@ -13,13 +13,13 @@ class Comment(
     val createdAt: Date?,
 
     @ManyToOne
-  @OnDelete(action = OnDeleteAction.CASCADE)
-  @JoinColumn(name="board_id")
-  val board: Board,
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    @JoinColumn(name = "board_id")
+    val board: Board,
 
     @ManyToOne
-  @JoinColumn(name = "user_id")
-  val user: User
+    @JoinColumn(name = "user_id")
+    val user: User
 
 ) {
     @Id

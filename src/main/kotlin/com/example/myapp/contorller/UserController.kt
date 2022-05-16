@@ -13,12 +13,12 @@ import org.springframework.web.bind.annotation.RestController
 class UserController(
     private val userService: UserService
 ) {
- @GetMapping("/{userId}")
- fun getUser(@PathVariable userId: String): UserDto {
-     return userService.getUser(userId)
- }
- @DeleteMapping("/{userId}")
- fun delUser(@PathVariable userId: String) {
-     return userService.delUser(userId)
- }
+    @GetMapping("/{userId}")
+    fun getUser(@PathVariable userId: String): UserDto {
+        return userService.getUser(userId)
+    }
+    @DeleteMapping("/{userId}")
+    fun delUser(@PathVariable userId: String) {
+        return userService.delUser(userId)
+    }
 }
