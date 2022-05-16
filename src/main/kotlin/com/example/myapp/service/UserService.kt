@@ -7,10 +7,15 @@ import org.springframework.stereotype.Service
 @Service
 class UserService(
     private val userRepository: UserRepository
+
+//    private val
 ) {
-    fun getUser(userId: Int): UserDto {
+    fun getUser(userId: String): UserDto {
         userRepository.getById(userId).apply {
-            return UserDto(userName, userAge, userSex, userId)
+            return UserDto(userId, password, userName, userSex)
         }
+    }
+    fun delUser(userId: String) {
+        userRepository.deleteById(userId)
     }
 }

@@ -1,6 +1,6 @@
 package com.example.myapp.repository
 
-import com.example.myapp.entity.User
+import com.example.myapp.entity.Board
 import org.springframework.data.jpa.repository.JpaRepository
 
-interface UserRepository : JpaRepository<User, String>
+interface BoardRepository : JpaRepository<Board, Int>

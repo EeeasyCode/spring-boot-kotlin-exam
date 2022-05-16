@@ -1,3 +1,5 @@
+
+
 spring:
   config:
     activate:
@@ -8,10 +10,12 @@ spring:
     password: "root"
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
     generate-ddl: true
     show-sql: true
-
+server:
+  address: localhost
+  port: 8888
 
 ---
 

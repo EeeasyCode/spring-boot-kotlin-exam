@@ -1,9 +1,6 @@
 package com.example.myapp.dto
 
-data class UserDto(
+data class LoginDto(
     val userId: String,
     val password: String,
-    val userName: String,
-    val userSex: String,
-
 )
